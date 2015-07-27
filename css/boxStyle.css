@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap1 {
+  line-height: 400px;
+  text-align: center;
+  height: 400px;
+  font-size: 36px;
+  background-color: #ccc;
+}
