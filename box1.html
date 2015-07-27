@@ -6,11 +6,121 @@
     <link rel="stylesheet" href="css/boxStyle.css"/>
 </head>
 <body>
+<!--只适合单行文字的水平垂直居中-->
 <div class="wrap1">
     水平垂直居中水平垂直居中
 </div>
+<hr/>
+<!--padding填充-->
 <div class="wrap2">
+    <div class="content2"></div>
+</div>
+<hr/>
+<div class="wrap3">
+    <div class="content3"></div>
+</div>
+<hr/>
+<!--margin填充-->
+<div class="wrap4">
+    <div class="content4"></div>
+</div>
+<hr/>
 
+<div class="wrap5">
+    <div class="content5">居中居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中</div>
+</div>
+<hr/>
+
+<!--absolute布局上下文下的水平垂直居中  50% + -50%-->
+<!--下面三个方法中，margin方法和relative方法都需要知道元素的宽高才行(relative方法只知道高也行)，适用于固定式布局，而transform方法则可以不知道元素宽高-->
+<div class="wrap6">
+    <div class="ele6 margin">水平垂直居中水平垂直<br>居中水平垂直居中水平<br>垂直居中水平垂直居<br>中水平垂直居中</div>
+</div>
+
+<div class="wrap6">
+    <div class="ele6 translate">水平垂直居中水平垂直<br>居中水平垂直居中水平<br>垂直居中水平垂直居<br>中水平垂直居中</div>
+</div>
+
+<div class="wrap6">
+    <div class="ele6 relative">
+        <div class="ele-inner">水平垂直居中水平垂直<br>居中水平垂直居中水平<br>垂直居中水平垂直居<br>中水平垂直居中</div>
+    </div>
+</div>
+<hr/>
+
+
+<!--text-align:center + absolute-->
+<!--text-aign:center本来是不能直接作用于absolute元素的，但是没有给其left等值的行级absolute元素是会受文本的影响的-->
+<div class="wrap7">
+    <div class="ele7"></div>
+</div>
+<hr/>
+
+<!--absolute + margin : auto-->
+<div class="wrap8">
+    <div class="ele"></div>
+</div>
+<hr/>
+
+<!--适用于图片居中的网易nec的一个方法-->
+<!--这种方法主要是利用了一个图片进行占位，
+以让父容器获得高宽，从而让进行-50%偏移的图片能有一个参照容器作百分比计算。
+优点是可以不知道图片的大小，
+随便放张尺寸不超过父容器的图片上去都能做到居中。
+另外，兼容性好，如果是不使用nth-child选择器的花，IE6都是能顺利兼容的-->
+<div class="wrap9">
+    <p>
+        <img src="http://nec.netease.com/img/s/1.jpg" alt=""/>
+        <img src="http://nec.netease.com/img/s/1.jpg" alt=""/>
+    </p>
+</div>
+<hr/>
+
+<!--float布局上下文下的水平垂直居中-->
+<div class="wrap10">
+    <div class="ele">
+        <div class="ele-inner">居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中居<br>中居中居中居中居中居中居中居中居中居<br>中居中居中居中居中居中居中</div>
+    </div>
+</div>
+<hr/>
+
+<div class="wrap11">
+    <div class="placeholder"></div>
+    <div class='content'></div>
+</div>
+<hr/>
+
+<div class="wrap12">
+    <div class='placeholder'><!--占位元素，用来作为居中元素的参照物--></div>
+    <div class="ele"></div>
+</div>
+<hr/>
+
+<div class="wrap13">
+    <div class="ele">居中居中居中居中居中居中<br>居中居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中</div>
+</div>
+<hr/>
+
+<div class="wrap14">
+    <div class="ele"></div>
+</div>
+<hr/>
+
+<div class="wrap15">
+    <div class="ele">
+        居中居中居中居中居中居中居中<br>
+        居中居中居中居中居中居中居中<br>
+        居中居中居中居中居中居中居中<br>
+        居中居中居中居中居中居中居中<br>
+        居中居中居中居中居中居中居中
+    </div>
+</div>
+<hr/>
+
+<div class='wrap16'>
+    <div class='ele'>
+        <div class="ele-inner">居中居中居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中<br>居中居中居中居中居中居中居中居中居中居中</div>
+    </div>
 </div>
 </body>
 </html>
